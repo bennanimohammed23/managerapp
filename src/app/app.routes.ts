@@ -12,6 +12,8 @@ import { FournisseurComponent } from './fournisseur/fournisseur.component';
 import { ClientComponent } from './client/client.component';
 import { DevisComponent } from './devis/devis.component';
 import { BcommandComponent } from './bcommand/bcommand.component';
+import { AjoutBcComponent } from './ajout-bc/ajout-bc.component';
+import { AjoutdevisComponent } from './ajoutdevis/ajoutdevis.component';
 
 export const routes: Routes = [
 
@@ -26,5 +28,7 @@ export const routes: Routes = [
     { path: 'fournisseur', component:FournisseurComponent},
     { path: 'client', component:ClientComponent},
     { path: 'Devis', component:DevisComponent},
-    { path: 'Bcommand', component:BcommandComponent}
+    { path: 'Bcommand', component:BcommandComponent},
+    { path: 'ajoutbc', component:AjoutBcComponent},
+    { path: 'ajoutdevis', component:AjoutdevisComponent}
 ];

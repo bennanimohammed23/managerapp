@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { AchatComponent } from './achat/achat.component';
 import { AdministrationComponent } from './administration/administration.component';
@@ -13,7 +13,11 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [RouterOutlet, NavbarComponent,AppComponent,AchatComponent,
     AdministrationComponent,FinancesComponent,
+<<<<<<< Updated upstream
     LogistiqueComponent,MarketingComponent ],
+=======
+    LogistiqueComponent,MarketingComponent,RouterModule],
+>>>>>>> Stashed changes
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

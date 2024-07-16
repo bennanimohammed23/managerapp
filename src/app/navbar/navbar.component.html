@@ -1,44 +1,43 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="achat">wav</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Marketing</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="article">Article</a></li>
-              <li><a class="dropdown-item" href="client">Client</a></li>
-              <li><a class="dropdown-item" href="fournisseur">Fournisseur</a></li>
-              <li><a class="dropdown-item" href="marketing">Gestion Client</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">commercial</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="Bcommand">Bon de commande</a></li>
-              <li><a class="dropdown-item" href="Devis">Devis</a></li>
-             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logistique">Logistique</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="achat">Achat</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="finances">Finance</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="administration">Administration</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-      </div>
-      
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/achat">wav</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" type="button" aria-expanded="false">Marketing</button>
+          <ul class="dropdown-menu">
+            <li><button class="dropdown-item" routerLink="/article">Article</button></li>
+            <li><button class="dropdown-item" routerLink="/client">Client</button></li>
+            <li><button class="dropdown-item" routerLink="/fournisseur">Fournisseur</button></li>
+            <li><button class="dropdown-item" routerLink="/marketing">Gestion Client</button></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" type="button" aria-expanded="false">Commercial</button>
+          <ul class="dropdown-menu">
+            <li><button class="dropdown-item" routerLink="/Bcommand">Bon de commande</button></li>
+            <li><button class="dropdown-item" routerLink="/Devis">Devis</button></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" routerLink="/logistique">Logistique</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" routerLink="/achat">Achat</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" routerLink="/finances">Finance</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" routerLink="/administration">Administration</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link disabled" aria-disabled="true">Disabled</button>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>

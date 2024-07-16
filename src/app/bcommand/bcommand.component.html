@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <div>
   <h2>Recherche de Bons de Commande</h2>
   <form (ngSubmit)="searchOrders()">
@@ -93,3 +94,85 @@
     </table>
   </div>
 </div>
+=======
+<!-- simple-form.component.html -->
+<div class="row g-4">
+  <form >
+    <div class="container mt-3">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <label for="text1" class="form-label">numero bc </label>
+          <input type="text" class="form-control" id="text1">
+        </div>
+        <div class="col-md-4">
+          <label for="text2" class="form-label">date</label>
+          <input type="date" class="form-control" id="date">
+        </div>
+        <div class="col-md-4">
+          <label for="text2" class="form-label">validation</label>
+          <select class="form-select" id="validate" formControlName="validate">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        
+      </div>
+      <div class="container mt-4">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <label for="commercial" class="form-label">Référence Client</label>
+            <input type="text" class="form-control" id="commercial" formControlName="commercial">
+          </div>
+          <div class="col-md-4">
+            <label for="status" class="form-label">Status</label>
+            <select class="form-select" id="validate" formControlName="validate">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          </div>
+             <div class="col-md-4">
+              <label for="status" class="form-label">commercial</label>
+              <select class="form-select" id="validate" formControlName="validate">
+                <option value="yes">tous</option>
+              <option value="yes">commercial1</option>
+              <option value="no">commercial2</option>
+              <option value="no">commercial3</option>
+            </select>
+            </div>
+      </div>
+      </div>
+   
+      <div class="col-md-4">
+        <label for="status" class="form-label">client </label>
+        <select class="form-select" id="validate" formControlName="validate">
+          <option value="yes">tous</option>
+        <option value="yes">client 1</option>
+        <option value="no">client 2</option>
+        <option value="no">client 3</option>
+      </select>
+      </div>
+      <div class="row g-6">
+      <div class=" col-md-4">
+    <button type="submit" class="btn btn-primary">rechrceh</button>
+    </div>
+    <div class=" col-md-4">
+   <a class="btn btn-primary" href="ajoutbc" role="button">ajoute un bc</a>
+    </div>
+    </div>
+    </div>
+  </form>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-4">
+        Column
+      </div>
+      <div class="col-md-4">
+        Column
+      </div>
+      <div class="col-md-4">
+        Column
+      </div>
+    </div>
+  </div>
+
+>>>>>>> Stashed changes
