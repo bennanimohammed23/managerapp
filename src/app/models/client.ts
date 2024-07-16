@@ -3,9 +3,16 @@ import { Quote } from "./quote";
 
 export class Client {
     id?: number;
-    name?: string;
-    email?: string;
-    phone?: string;
-    orders?: Order[];
-    quotes?: Quote[];
+  societe?: string;
+  contact?: string;
+  email?: string;
+  phone?: string;
+  profilSociete?: string;
+  categorie?: string;
+  sousCategorie?: string;
+  actif?: boolean;
+  bloque?: boolean;
+  typeClient?: string;
+  orderIds?: number[];
+  quoteIds?: number[];
 }

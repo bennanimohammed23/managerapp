@@ -1,19 +1,88 @@
-<p>devis works!</p>
-<div class="loader">
-    <div class="cell d-0"></div>
-    <div class="cell d-1"></div>
-    <div class="cell d-2"></div>
-  
-    <div class="cell d-1"></div>
-    <div class="cell d-2"></div>
+<div>
+  <h2>Recherche de Devis</h2>
+  <form (ngSubmit)="searchQuotes()">
+    <div>
+      <label for="code">Code:</label>
+      <input type="text" id="code" [(ngModel)]="quote.code" name="code">
+    </div>
+    <div>
+      <label for="revision">Revision:</label>
+      <input type="text" id="revision" [(ngModel)]="quote.revision" name="revision">
+    </div>
+    <div>
+      <label for="objet">Objet:</label>
+      <input type="text" id="objet" [(ngModel)]="quote.objet" name="objet">
+    </div>
+    <div>
+      <label for="clientId">Client ID:</label>
+      <input type="number" id="clientId" [(ngModel)]="clientId" name="clientId">
+    </div>
+    <div>
+      <label for="date">Date:</label>
+      <input type="date" id="date" [(ngModel)]="quote.date" name="date">
+    </div>
+    <div>
+      <label for="actif">Actif:</label>
+      <input type="checkbox" id="actif" [(ngModel)]="quote.actif" name="actif">
+    </div>
+    <div>
+      <label for="valide">Valide:</label>
+      <input type="checkbox" id="valide" [(ngModel)]="quote.valide" name="valide">
+    </div>
+    <div>
+      <label for="statut">Statut:</label>
+      <input type="text" id="statut" [(ngModel)]="quote.statut" name="statut">
+    </div>
+    <div>
+      <label for="montant">Montant:</label>
+      <input type="number" id="montant" [(ngModel)]="quote.montant" name="montant">
+    </div>
+    <div>
+      <label for="nature">Nature:</label>
+      <input type="text" id="nature" [(ngModel)]="quote.nature" name="nature">
+    </div>
+    <div>
+      <label for="projet">Projet:</label>
+      <input type="text" id="projet" [(ngModel)]="quote.projet" name="projet">
+    </div>
     
-    
-    <div class="cell d-2"></div>
-    <div class="cell d-3"></div>
-    
-    
-    <div class="cell d-3"></div>
-    <div class="cell d-4"></div>
-    
-    
+    <button type="submit">Rechercher</button>
+  </form>
+  <div *ngIf="quotes.length > 0">
+    <h3>Résultats de la Recherche:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Date</th>
+          <th>Code</th>
+          <th>Revision</th>
+          <th>Objet</th>
+          <th>Actif</th>
+          <th>Valide</th>
+          <th>Statut</th>
+          <th>Montant</th>
+          <th>Nature</th>
+          <th>Projet</th>
+          <th>Client ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let quote of quotes">
+          <td>{{ quote.id }}</td>
+          <td>{{ quote.date }}</td>
+          <td>{{ quote.code }}</td>
+          <td>{{ quote.revision }}</td>
+          <td>{{ quote.objet }}</td>
+          <td>{{ quote.actif }}</td>
+          <td>{{ quote.valide }}</td>
+          <td>{{ quote.statut }}</td>
+          <td>{{ quote.montant }}</td>
+          <td>{{ quote.nature }}</td>
+          <td>{{ quote.projet }}</td>
+          <td>{{ quote.clientId }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</div>

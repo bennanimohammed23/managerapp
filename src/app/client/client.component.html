@@ -1,56 +1,90 @@
-<p>client works!</p>
+<div class="client-form">
+  <h2>Recherche de Clients</h2>
+  <form (ngSubmit)="searchClients()">
+    <div class="form-group">
+      <label for="societe">Société:</label>
+      <input id="societe" [(ngModel)]="client.societe" name="societe" type="text" class="form-control">
+    </div>
+    
+  
+  <div class="form-group">
+    <label for="contact">Contact:</label>
+    <input id="contact" [(ngModel)]="client.contact" name="contact" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input id="email" [(ngModel)]="client.email" name="email" type="email" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="phone">Téléphone:</label>
+    <input id="phone" [(ngModel)]="client.phone" name="phone" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="profilSociete">Profil Société:</label>
+    <input id="profilSociete" [(ngModel)]="client.profilSociete" name="profilSociete" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="categorie">Catégorie:</label>
+    <input id="categorie" [(ngModel)]="client.categorie" name="categorie" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="sousCategorie">Sous Catégorie:</label>
+    <input id="sousCategorie" [(ngModel)]="client.sousCategorie" name="sousCategorie" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="actif">Actif:</label>
+    <select id="actif" [(ngModel)]="client.actif" name="actif" class="form-control">
+      <option [ngValue]="true">Oui</option>
+      <option [ngValue]="false">Non</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="bloque">Bloqué:</label>
+    <select id="bloque" [(ngModel)]="client.bloque" name="bloque" class="form-control">
+      <option [ngValue]="true">Oui</option>
+      <option [ngValue]="false">Non</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="typeClient">Type Client:</label>
+    <input id="typeClient" [(ngModel)]="client.typeClient" name="typeClient" type="text" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Rechercher</button>
+</form>
 
-<form class="row g-3">
-    <div class="col-md-4">
-      <label for="inputEmail4" class="form-label">societe</label>
-      <input type="email" class="form-control" id="inputEmail4">
-    </div>
-    <div class="col-md-4">
-      <label for="inputPassword4" class="form-label">contact</label>
-      <input type="password" class="form-control" id="inputPassword4">
-    </div>
-    <div class="col-4">
-      <label for="inputAddress" class="form-label">email</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
-    <div class="col-4">
-      <label for="inputAddress2" class="form-label">phone</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
-    <div class="col-md-4">
-      <label for="inputCity" class="form-label">commercial</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="col-md-3">
-        <label for="validationDefault04" class="form-label">Statu</label>
-        <select class="form-select" id="validationDefault04" required>
-          <option selected disabled value="1"></option>
-          <option>en compt</option>
-          <option>divers</option>
-        </select>
-      </div>
-    <div class="col-6">
-        <button class="btn btn-primary" type="submit">rechreche</button>
-    </div>
-    <div class="col-6">
-        <button type="button" class="btn btn-danger">reset</button>
-    </div>
-  </form>
-  <div class="container">
-    <div class="row">
-      <div class="col-md">
-        nom
-      </div>
-      <div class="col-md">
-        contacte
-      </div>
-      <div class="col-md">
-        email
-      </div>
-      <div class="col-md">
-        telephone
-      </div>
-      <div class="col-md">
-        article
-      </div>
-    </div>
+<h2>Résultats de la Recherche:</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Société</th>
+      <th>Contact</th>
+      <th>Email</th>
+      <th>Téléphone</th>
+      <th>Profil Société</th>
+      <th>Catégorie</th>
+      <th>Sous Catégorie</th>
+      <th>Actif</th>
+      <th>Bloqué</th>
+      <th>Type Client</th>
+      <th>Commandes</th>
+      <th>Devis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{ client.societe }}</td>
+      <td>{{ client.contact }}</td>
+      <td>{{ client.email }}</td>
+      <td>{{ client.phone }}</td>
+      <td>{{ client.profilSociete }}</td>
+      <td>{{ client.categorie }}</td>
+      <td>{{ client.sousCategorie }}</td>
+      <td>{{ client.actif ? 'Oui' : 'Non' }}</td>
+      <td>{{ client.bloque ? 'Oui' : 'Non' }}</td>
+      <td>{{ client.typeClient }}</td>
+      <td>{{ client.orderIds?.join(', ') }}</td>
+      <td>{{ client.quoteIds?.join(', ') }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

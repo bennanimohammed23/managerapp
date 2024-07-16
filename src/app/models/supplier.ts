@@ -1,3 +1,4 @@
+import { Product } from "./product";
 import { PurchaseOrder } from "./purchase-order";
 
 export class Supplier {
@@ -6,6 +7,9 @@ export class Supplier {
     contact?: string;
     email?: string;
     phone?: string;
+    products?: Product[];
+    productNames?: string[];
     purchaseOrders?: PurchaseOrder[];
+    purchaseOrderIds?: number[]; 
   }
 

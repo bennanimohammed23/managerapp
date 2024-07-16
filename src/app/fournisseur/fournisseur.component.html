@@ -1,47 +1,55 @@
-
-<form class="row g-3">
-    <div class="col-md-4">
-      <label for="inputEmail4" class="form-label">nom</label>
-      <input type="email" class="form-control" id="inputEmail4">
+<div class="supplier-form">
+  <h2>Recherche de Fournisseurs</h2>
+  <form (ngSubmit)="searchSuppliers()">
+    <div class="form-group">
+      <label for="name">Nom:</label>
+      <input id="name" [(ngModel)]="supplier.name" name="name" type="text" class="form-control">
     </div>
-    <div class="col-md-4">
-      <label for="inputPassword4" class="form-label">contact</label>
-      <input type="password" class="form-control" id="inputPassword4">
+    <div class="form-group">
+      <label for="contact">Contact:</label>
+      <input id="contact" [(ngModel)]="supplier.contact" name="contact" type="text" class="form-control">
     </div>
-    <div class="col-4">
-      <label for="inputAddress" class="form-label">email</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="email" [(ngModel)]="supplier.email" name="email" type="text" class="form-control">
     </div>
-    <div class="col-6">
-      <label for="inputAddress2" class="form-label">phone</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <div class="form-group">
+      <label for="phone">Téléphone:</label>
+      <input id="phone" [(ngModel)]="supplier.phone" name="phone" type="text" class="form-control">
     </div>
-    <div class="col-md-6">
-      <label for="inputCity" class="form-label">article</label>
-      <input type="text" class="form-control" id="inputCity">
+    <div class="form-group">
+      <label for="productName">Nom du Produit:</label>
+      <input id="productName" [(ngModel)]="productName" name="productName" type="text" class="form-control">
     </div>
-    <div class="col-6">
-        <button class="btn btn-primary" type="submit">rechreche</button>
-    </div>
-    <div class="col-6">
-        <button type="button" class="btn btn-danger">reset</button>
-    </div>
+    <button type="submit" class="btn btn-primary">Rechercher</button>
   </form>
-  <div class="container">
-    <div class="row">
-      <div class="col-md">
-        nom
-      </div>
-      <div class="col-md">
-        contacte
-      </div>
-      <div class="col-md">
-        email
-      </div>
-      <div class="col-md">
-        telephone
-      </div>
-      <div class="col-md">
-        article
-      </div>
-    </div>
+
+  <div *ngIf="suppliersDisplayData.length > 0" class="supplier-list">
+    <h3>Résultats de la Recherche:</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Contact</th>
+          <th>Email</th>
+          <th>Téléphone</th>
+          <th>Produits</th>
+          <th>Commandes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let supplier of suppliersDisplayData">
+          <td>{{ supplier.name }}</td>
+          <td>{{ supplier.contact }}</td>
+          <td>{{ supplier.email }}</td>
+          <td>{{ supplier.phone }}</td>
+          <td>{{ supplier.productNames }}</td>
+          <td>{{ supplier.purchaseOrderIds }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="suppliersDisplayData.length === 0">
+    <p>Aucun fournisseur trouvé.</p>
+  </div>
+</div>

@@ -6,13 +6,14 @@ import { AdministrationComponent } from './administration/administration.compone
 import { FinancesComponent } from './finances/finances.component';
 import { LogistiqueComponent } from './logistique/logistique.component';
 import { MarketingComponent } from './marketing/marketing.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, NavbarComponent,AppComponent,AchatComponent,
     AdministrationComponent,FinancesComponent,
-    LogistiqueComponent,MarketingComponent],
+    LogistiqueComponent,MarketingComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
