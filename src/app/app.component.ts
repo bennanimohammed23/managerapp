@@ -13,11 +13,8 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [RouterOutlet, NavbarComponent,AppComponent,AchatComponent,
     AdministrationComponent,FinancesComponent,
-<<<<<<< Updated upstream
     LogistiqueComponent,MarketingComponent ],
-=======
     LogistiqueComponent,MarketingComponent,RouterModule],
->>>>>>> Stashed changes
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -12,7 +12,6 @@ import { Component } from '@angular/core';
   templateUrl: './article.component.html',
   styleUrl: './article.component.css'
 })
-<<<<<<< Updated upstream
 export class ArticleComponent {
 
   subSubCategory: any;
@@ -62,6 +61,4 @@ export class ArticleComponent {
 
   
 }
-=======
 export class ArticleComponent {}
->>>>>>> Stashed changes
