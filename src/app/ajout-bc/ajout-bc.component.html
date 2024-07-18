@@ -1,0 +1,54 @@
+<!-- simple-form.component.html -->
+<div class="row g-4">
+    <form >
+      <div class="container mt-4">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <label for="text1" class="form-label">numero bc </label>
+            <input type="text" class="form-control" id="text1">
+          </div>
+          <div class="col-md-4">
+            <label for="text2" class="form-label">date</label>
+            <input type="date" class="form-control" id="date">
+          </div>
+          <div class="col-md-4">
+            <div class="col-md-4">
+                <label for="commercial" class="form-label">Référence Client</label>
+                <input type="text" class="form-control" id="commercial" formControlName="commercial">
+              </div>
+          </div>
+        </div>
+        <div class="container mt-4">
+          <div class="row g-4">
+                <div class="col-md-4">
+                <label for="status" class="form-label">commercial</label>
+                <select class="form-select" id="validate" formControlName="validate">
+                  <option value="yes">tous</option>
+                <option value="yes">commercial1</option>
+                <option value="no">commercial2</option>
+                <option value="no">commercial3</option>
+              </select>
+              </div>
+              <div class="col-md-4">
+                <label for="status" class="form-label">client </label>
+                <select class="form-select" id="validate" formControlName="validate">
+                  <option value="yes">tous</option>
+                <option value="yes">client 1</option>
+                <option value="no">client 2</option>
+                <option value="no">client 3</option>
+              </select>
+              </div>
+        </div>
+        </div>
+     
+        
+        <div class="container mt-4">
+        <div class=" col-md-3">
+      <button type="submit" class="btn btn-primary">enregistre</button>
+      <div class=" col-md-3">
+      <button type="reset" class="btn btn-danger">resete</button></div>
+      </div>
+        </div>
+      
+  
+  

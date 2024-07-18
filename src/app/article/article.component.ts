@@ -1,13 +1,10 @@
-<<<<<<< Updated upstream
 import { CommonModule } from '@angular/common';
 import { Component,  } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Product } from '../models/product';
 import { ProductService } from '../services/product.service';
 
-=======
 import { Component } from '@angular/core';
->>>>>>> Stashed changes
 @Component({
   selector: 'app-article',
   standalone: true,
