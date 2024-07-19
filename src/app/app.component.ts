@@ -13,8 +13,8 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [RouterOutlet, NavbarComponent,AppComponent,AchatComponent,
     AdministrationComponent,FinancesComponent,
-    LogistiqueComponent,MarketingComponent ],
-    LogistiqueComponent,MarketingComponent,RouterModule],
+    LogistiqueComponent,MarketingComponent 
+    ,RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

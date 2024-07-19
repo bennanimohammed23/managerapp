@@ -1,4 +1,5 @@
 <div class="article-form">
+  
   <h2>Recherche d'Articles</h2>
   <form (ngSubmit)="searchProducts()">
     <!-- Form fields for search criteria -->
@@ -29,7 +30,7 @@
     <button type="submit" class="btn btn-primary">Rechercher test</button>
   </form>
 
-<<<<<<< Updated upstream
+
   <div *ngIf="filteredProducts.length > 0" class="product-list">
     <h3>Résultats de la Recherche:</h3>
     <table class="table table-striped">
@@ -61,66 +62,3 @@
   </div>
   <div *ngIf="filteredProducts.length === 0">
     <p>Aucun produit trouvé.</p>
-=======
-<form class="row g-3">
-  <div class="col-md-4">
-    <label for="text" class="form-label">Reference</label>
-    <input type="text" class="form-control" id="text">
-  </div>
-  <div class="col-md-4">
-    <label for="text" class="form-label">Designation</label>
-    <input type="text" class="form-control" id="text">
-  </div>
-  <div class="col-md-4">
-    <label for="inputAddress" class="form-label">Category</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress2" class="form-label">fournisseur</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">Number of results</label>
-    <select id="inputState" class="form-select">
-      <option selected></option>
-      <option>50</option>
-      <option>100</option>
-      <option>500</option>
-    </select>
-  </div>
-  <div class="col-md-2">
-    <label for="inputDisponibility" class="form-label">disponible</label>
-    <select id="inputDisponibility" class="form-select">
-      <option selected></option>
-      <option value="1">Yes</option>
-      <option value="2">No</option>
-      <option value="3">All</option>
-    </select>
-  </div>
-  
-  <div class="col-42">
-    <button type="submit" class="btn btn-primary">Recherche</button>
-    <button type="button" class="btn btn-danger">reset</button>
-  </div>
-</form>
-<div class="container">
-  <div class="row">
-    <div class="col-md">
-      REFERENCE
-    </div>
-    <div class="col-md">
-      designation
-    </div>
-    <div class="col-md">
-      stock
-    </div>
-    <div class="col-md">
-      price
-    </div>
->>>>>>> Stashed changes
-  </div>
-</div>
